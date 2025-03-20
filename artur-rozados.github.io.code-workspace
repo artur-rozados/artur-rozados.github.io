@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../main-remote"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "artur-rozados.github.io"
+	}
+}
