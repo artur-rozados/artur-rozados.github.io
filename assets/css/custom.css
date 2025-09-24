@@ -1,4 +1,6 @@
-/* -------- Layout base (desktop) -------- */
+/* ==============================
+   LAYOUT BASE (DESKTOP)
+   ============================== */
 #header {
   width: 35%;
   position: fixed;
@@ -27,7 +29,9 @@
   z-index: -1;
 }
 
-/* Texto do header */
+/* ==============================
+   TEXTO NO HEADER
+   ============================== */
 #header h1,
 #header p {
   color: #fff;
@@ -41,42 +45,34 @@
 }
 
 #header p {
-  font-size: 1.4rem;
+  font-size: 1.4em;
   max-width: 28ch;
   margin: 0 auto;
   text-align: left;
 }
 
-/* Botões padrão */
+/* ==============================
+   BOTÕES
+   ============================== */
 .button {
   border-radius: 6px;
   padding: 0.6em 1.2em;
   font-size: 0.95em;
   transition: all 0.2s ease-in-out;
 }
-
 .button:hover {
   background-color: #0077b6;
   color: #fff !important;
   transform: scale(1.05);
 }
-
 .button.alt {
   background-color: transparent;
   border: 2px solid #fff;
   color: #fff !important;
 }
-
 .button.alt:hover {
   background-color: #fff;
   color: #000 !important;
-}
-
-/* Links de projetos no index */
-.proj-link img {
-  display: block;
-  width: 100%;
-  border-radius: 6px;
 }
 
 /* Botões maiores e legíveis */
@@ -111,13 +107,9 @@
   background: #ddd;
 }
 
-/* Imagens internas dos projetos */
-.project-images img {
-  max-width: 50%;
-  height: auto;
-  margin: 0 auto 1rem auto;
-  display: block;
-}
+/* ==============================
+   PROJETOS (INDEX + PÁGINAS)
+   ============================== */
 
 /* Thumbs no index */
 .work-item img {
@@ -127,7 +119,34 @@
   border-radius: 8px;
 }
 
-/* -------- Responsividade até 980px -------- */
+/* Links de projetos no index */
+.proj-link img {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* Imagens internas dos projetos */
+.project-images img {
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto 1rem auto;
+  display: block;
+}
+
+/* FONTES DOS PROJETOS (DESKTOP) */
+.project-page #main h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.project-page #main p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* ==============================
+   RESPONSIVIDADE ATÉ 980px (TABLET)
+   ============================== */
 @media screen and (max-width: 980px) {
   #header {
     position: relative;
@@ -136,7 +155,6 @@
     padding: 1.5rem 1rem;
     text-align: center;
   }
-
   #main {
     margin-left: 0;
     width: 100%;
@@ -146,7 +164,6 @@
   #header h1 {
     font-size: 1.8rem;
   }
-
   #header p {
     font-size: 1.1rem;
     max-width: none;
@@ -163,7 +180,7 @@
     max-width: 50%;
   }
 
-  /* Botões mais compactos no mobile */
+  /* Botões compactos */
   .project-buttons a {
     display: block;
     margin: 0.5rem auto;
@@ -171,30 +188,12 @@
     padding: 0.6rem 1rem;
   }
 
-  /* Corrigir footer duplicado no mobile */
+  /* Corrigir footer duplicado */
   #footer + #footer {
     display: none;
   }
-}
 
-/* ==============================
-   FONTES DOS PROJETOS - DESKTOP
-   ============================== */
-.project-page #main h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.project-page #main p {
-  font-size: 1.1rem;
-  line-height: 1.6;
-}
-
-/* ==============================
-   FONTES DOS PROJETOS - MOBILE
-   ============================== */
-@media screen and (max-width: 980px) {
-  /* Header */
+  /* FONTES DOS PROJETOS (TABLET) */
   .project-page #header h1 {
     font-size: 2.9rem !important;
     line-height: 1.3 !important;
@@ -203,8 +202,6 @@
     font-size: 2.1rem !important;
     line-height: 1.6 !important;
   }
-
-  /* Conteúdo */
   .project-page #main h2 {
     font-size: 2.7rem !important;
     margin-bottom: 1rem !important;
@@ -214,4 +211,52 @@
     font-size: 1.9rem !important;
     line-height: 1.7 !important;
   }
+}
+
+/* ==============================
+   RESPONSIVIDADE ATÉ 768px (MOBILE)
+   ============================== */
+@media screen and (max-width: 768px) {
+  .project-page #header h1 {
+    font-size: 5rem;
+    line-height: 1.3;
+  }
+  .project-page #header p {
+    font-size: 4rem;
+    line-height: 1.6;
+  }
+  .project-page #main h2 {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+  }
+  .project-page #main p {
+    font-size: 4rem;
+    line-height: 1.7;
+  }
+
+  /* Esconder footer duplicado só nos projetos */
+  .project-page .footer-project {
+    display: none;
+  }
+}
+
+
+/* ==============================
+   SWITCH DE LINGUAGEM
+   ============================== */
+
+.lang-switch {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.lang-switch a {
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 600;
+  color: #0077b6;
+}
+
+.lang-switch a:hover {
+  text-decoration: underline;
 }
