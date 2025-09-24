@@ -198,3 +198,44 @@
   object-fit: cover;   /* mantém proporção, cortando excesso */
   border-radius: 8px;  /* opcional: deixa cantos arredondados */
 }
+
+
+/* -------- Responsividade Mobile -------- */
+@media screen and (max-width: 768px) {
+
+  /* Thumbs dos projetos no index */
+  .work-item img {
+    height: auto;          /* deixa altura automática */
+    max-height: 200px;     /* limite máximo */
+    object-fit: cover;     /* corta excesso se necessário */
+  }
+
+  /* Imagens das páginas internas */
+  .project-images img {
+    max-width: 90%;        /* ocupa quase toda a largura */
+    height: auto;          /* mantém proporção */
+  }
+
+  /* Corrige espaçamento do header no mobile */
+  #header {
+    padding: 1.5rem 1rem;
+    text-align: center;
+  }
+
+  #header h1 {
+    font-size: 1.5rem;
+  }
+
+  #header p {
+    font-size: 1rem;
+    max-width: none;       /* libera largura */
+  }
+
+  /* Botões mais ajustados no mobile */
+  .project-buttons a {
+    display: block;        /* empilha os botões */
+    margin: 0.5rem auto;   /* centraliza */
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+}
