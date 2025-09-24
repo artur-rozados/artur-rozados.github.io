@@ -213,6 +213,12 @@
   }
 }
 
+  /* Botões ainda maiores no mobile */
+  .project-buttons a,
+  .lang-switch a {
+    font-size: 1.5rem; 
+  }
+
 /* ==============================
    RESPONSIVIDADE ATÉ 768px (MOBILE)
    ============================== */
@@ -240,11 +246,6 @@
   }
 }
 
-  /* Botões ainda maiores no mobile */
-  .project-buttons a,
-  .lang-switch a {
-    font-size: 1.5rem; 
-  }
 
 /* ==============================
    SWITCH DE LINGUAGEM
