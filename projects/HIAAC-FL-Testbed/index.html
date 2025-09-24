@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="utf-8">
-    <title>Project: Pi NAS</title>
+    <title>Projeto: Roteador OpenWRT</title>
     <link rel="stylesheet" href="../../assets/css/main.css">
     <link rel="stylesheet" href="../../assets/css/custom.css">
     <style>
@@ -25,20 +25,21 @@
       <!-- Painel esquerdo -->
       <header id="header">
         <div class="inner">
-          <h1><strong>Project: NAS / Backup System</strong></h1>
-          <p>Raspberry Pi NAS with OpenMediaVault + Docker + Syncthing.<br>
-          Redundancy with two external SSDs and secure remote access via Tailscale.</p>
+          <h1><strong>Projeto: Roteador OpenWRT</strong></h1>
+          <p>Raspberry Pi 4 rodando OpenWRT com WireGuard/OpenVPN e Tailscale.<br>
+          Objetivo: acesso remoto seguro mesmo atrás de CGNAT.</p>
         <!--Não feche </div> aqui, fica feio por algum motivo-->
 
           <!-- Switch de idioma -->
           <div class="lang-switch">
             <a href="index.html">🇧🇷 PT</a> | 
             <a href="index-en.html">🇺🇸 EN</a>
-          
+          </div>
 
+          <!-- Botões -->
           <div class="project-buttons">
-            <!-- <a href="https://github.com/artur-rozados" target="_blank" class="github-link">View on GitHub</a> -->
-            <a href="../../index.html" class="back-link">← Back to Portfolio</a>
+            <a href="https://github.com/artur-rozados/HIAAC-FL-Testbed" target="_blank" class="github-link">Ver no GitHub</a>
+            <a href="../../index.html" class="back-link">← Voltar ao Portfólio</a>
           </div>
         </div>
       </header>
@@ -46,22 +47,18 @@
       <!-- Conteúdo principal -->
       <div id="main">
         <section>
-          <h2>Description</h2>
+          <h2>Descrição</h2>
           <p>
-            Implementation of a home NAS server using a Raspberry Pi running OpenMediaVault,
-            employing Docker for additional services and Syncthing for automatic file synchronization.
-            System configured with redundancy across two external SSDs and secure remote access via Tailscale.
+            Desenvolvimento de um roteador baseado em Raspberry Pi 4 utilizando OpenWRT,
+            com suporte a CGNAT bypass via Tailscale e integração de VPNs (WireGuard e OpenVPN).
           </p>
-          
           <h2>Imagens</h2>
           <div class="project-images">
-            <img src="images/pi-nas-01.jpg" alt="Pi NAS 1" class="image fit">
-            <img src="images/pi-nas-02.jpg" alt="Pi NAS 2" class="image fit">
+            <img src="images/esquematica.png" alt="OpenWRT Router 1" class="image fit">
+            <img src="images/openwrt-router-02.jpg" alt="OpenWRT Router 2" class="image fit">
           </div>
         </section>
       </div>
     </div>
   </body>
 </html>
-
-
