@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title>Projeto: Pi-NAS</title>
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/custom.css">
+    <style>
+      /* Ajustes específicos para páginas de projeto */
+      .project-buttons {
+        margin-top: 2rem;
+      }
+      .project-buttons a {
+        display: inline-block;
+        padding: 0.4rem 0.8rem;
+        font-size: 0.85rem;
+        margin-right: 0.5rem;
+        border-radius: 6px;
+      }
+    </style>
+  </head>
+  <body class="is-preload">
+    <div id="wrapper">
+
+      <!-- Painel esquerdo -->
+      <header id="header">
+        <div class="inner">
+          <h1><strong>Projeto: Pi-NAS</strong></h1>
+          <p>NAS baseado em Raspberry Pi com OpenMediaVault, Docker e Syncthing.<br>
+          Redundância com 2 SSDs (armazenamento + backups via rsync).<br>
+          Acesso remoto seguro via Tailscale.</p>
+
+          <div class="project-buttons">
+            <a href="https://github.com/artur-rozados" target="_blank" class="github-link">Ver no GitHub</a>
+            <a href="../../index.html" class="back-link">← Voltar ao Portfólio</a>
+          </div>
+        </div>
+      </header>
+
+      <!-- Conteúdo principal -->
+      <div id="main">
+        <section>
+          <h2>Descrição</h2>
+          <p>
+            Desenvolvimento de um sistema de backup e sincronização descentralizado utilizando Raspberry Pi,
+            OpenMediaVault (OMV) e Docker. O Syncthing sincroniza arquivos entre dispositivos
+            automaticamente, enquanto dois SSDs externos garantem redundância:
+            um para armazenamento e outro para backups incrementais via rsync.
+          </p>
+          <h2>Imagens</h2>
+          <div class="project-images">
+            <img src="images/pi-nas-01.jpg" alt="Pi-NAS 1" class="image fit">
+            <img src="images/pi-nas-02.jpg" alt="Pi-NAS 2" class="image fit">
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

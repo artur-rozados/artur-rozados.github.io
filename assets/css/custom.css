@@ -1,0 +1,200 @@
+
+/* -------- Layout -------- */
+#header {
+  width: 35%;          /* ocupa 35% da largura da tela */
+  position: fixed;     /* fica fixo na lateral */
+  top: 0;
+  left: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 1;          /* garante que fique acima do fundo */
+}
+
+#main {
+  margin-left: 35%;    /* começa depois do header */
+  width: 65%;
+  padding: 2rem;       /* espaço interno */
+}
+
+/* -------- Overlay no header -------- */
+#header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4); /* camada preta 40% */
+  z-index: -1; /* atrás do texto */
+}
+
+/* -------- Texto no header -------- */
+#header h1,
+#header p {
+  color: #fff; /* sempre branco */
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7);
+  line-height: 1.5;
+}
+
+#header h1 {
+  font-size: 2.0em; /* título maior */
+  margin-bottom: 1rem;
+}
+
+#header p {
+  font-size: 1.4em;
+}
+
+
+#header p {
+  max-width: 28ch;   /* aumenta limite (antes era mais estreito) */
+  margin: 0 auto;    /* centraliza dentro do header */
+  text-align: left;  /* deixa alinhado à esquerda */
+}
+/* -------- Botões -------- */
+.button {
+  border-radius: 6px;
+  padding: 0.6em 1.2em;
+  font-size: 0.95em;
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: #0077b6;
+  color: #fff !important;
+  transform: scale(1.05);
+}
+
+.button.alt {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff !important;
+}
+
+.button.alt:hover {
+  background-color: #fff;
+  color: #000 !important;
+}
+
+/* -------- Responsividade -------- */
+@media screen and (max-width: 980px) {
+  #header {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  #main {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+
+/* Links para projetos no index */
+.proj-link img {
+  display: block;
+  width: 100%;
+  border-radius: 6px; /* mesmo estilo do tema */
+}
+
+
+/* Link de voltar */
+.back-link {
+  display: inline-block;
+  margin: 1em 0;
+  color: #666;
+  text-decoration: none;
+  font-size: 0.95em;
+}
+
+.back-link:hover {
+  color: #2ebaae; /* cor de destaque */
+  text-decoration: underline;
+}
+
+
+/* Botões maiores e legíveis */
+.back-link,
+.github-link,
+.button {
+  font-size: 1rem;       /* aumenta o tamanho do texto */
+  padding: 0.75em 1.5em; /* mais espaço interno */
+  border-radius: 8px;    /* cantos mais arredondados */
+  font-weight: 600;      /* texto mais forte */
+  display: inline-block; /* garante alinhamento */
+  text-align: center;
+}
+
+/* Versão escura para botões principais (ex: GitHub) */
+.github-link {
+  background: #24292f; /* cor do GitHub */
+  color: #fff !important;
+  border: none;
+}
+
+.github-link:hover {
+  background: #444c56;
+}
+
+/* Botão "Voltar" claro */
+.back-link {
+  background: #f0f0f0;
+  color: #333 !important;
+  border: none;
+}
+
+.back-link:hover {
+  background: #ddd;
+}
+
+
+/* Corrige layout da esquerda */
+#project-header {
+  background: url("../../images/bg.jpg") no-repeat center center;
+  background-size: cover;
+  color: white;
+  text-align: left;
+  padding: 3rem 2rem;
+}
+
+#project-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+#project-header p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.project-buttons {
+  margin-top: 2rem;
+}
+
+.project-buttons a {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+  border-radius: 6px;
+}
+
+/* Ajustes específicos para páginas de projeto */
+.project-images img {
+  max-width: 50%;   /* controla o tamanho */
+  height: auto;     /* mantém a proporção */
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Normalizar altura das thumbs na página inicial */
+.work-item img {
+  height: 350px;       /* altura fixa */
+  width: 100%;         /* ocupa toda a largura do container */
+  object-fit: cover;   /* mantém proporção, cortando excesso */
+  border-radius: 8px;  /* opcional: deixa cantos arredondados */
+}
