@@ -203,21 +203,26 @@
 /* -------- Responsividade Mobile -------- */
 @media screen and (max-width: 768px) {
 
-  /* Thumbs dos projetos no index */
+  /* Ajusta thumbs dos projetos no index */
   .work-item img {
-    height: auto;          /* deixa altura automática */
+    height: auto;          /* altura automática */
     max-height: 200px;     /* limite máximo */
-    object-fit: cover;     /* corta excesso se necessário */
+    object-fit: cover;     /* mantém proporção */
   }
 
-  /* Imagens das páginas internas */
+  /* Imagens dentro das páginas de projetos */
   .project-images img {
-    max-width: 90%;        /* ocupa quase toda a largura */
-    height: auto;          /* mantém proporção */
+    max-width: 90%;        /* ocupa 90% da tela */
+    height: auto;
+    margin: 0 auto 1rem auto; /* centraliza */
+    display: block;
   }
 
-  /* Corrige espaçamento do header no mobile */
+  /* Header no mobile */
   #header {
+    position: relative;   /* remove fixo */
+    width: 100%;
+    height: auto;
     padding: 1.5rem 1rem;
     text-align: center;
   }
@@ -231,11 +236,16 @@
     max-width: none;       /* libera largura */
   }
 
-  /* Botões mais ajustados no mobile */
+  /* Botões nos projetos */
   .project-buttons a {
-    display: block;        /* empilha os botões */
-    margin: 0.5rem auto;   /* centraliza */
+    display: block;
+    margin: 0.5rem auto;
     font-size: 0.9rem;
     padding: 0.6rem 1rem;
+  }
+
+  /* Corrige footer duplicado */
+  #footer {
+    margin-top: 2rem;
   }
 }
