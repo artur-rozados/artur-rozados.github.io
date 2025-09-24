@@ -200,40 +200,47 @@
 }
 
 
-/* -------- Responsividade Mobile -------- */
-@media screen and (max-width: 768px) {
-
-  /* Ajusta thumbs dos projetos no index */
-  .work-item img {
-    height: auto;          /* altura automática */
-    max-height: 200px;     /* limite máximo */
-    object-fit: cover;     /* mantém proporção */
-  }
-
-  /* Imagens dentro das páginas de projetos */
-  .project-images img {
-    max-width: 90%;        /* ocupa 90% da tela */
-    height: auto;
-    margin: 0 auto 1rem auto; /* centraliza */
-    display: block;
-  }
-
-  /* Header no mobile */
+/* -------- Responsividade -------- */
+@media screen and (max-width: 980px) {
+  /* Header ocupa toda a largura */
   #header {
-    position: relative;   /* remove fixo */
+    position: relative;
     width: 100%;
     height: auto;
     padding: 1.5rem 1rem;
     text-align: center;
   }
 
+  /* Conteúdo principal vem logo abaixo */
+  #main {
+    margin-left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  /* Texto do header */
   #header h1 {
     font-size: 1.5rem;
   }
 
   #header p {
     font-size: 1rem;
-    max-width: none;       /* libera largura */
+    max-width: none; /* deixa expandir */
+  }
+
+  /* Thumbs dos projetos no index */
+  .work-item img {
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+  }
+
+  /* Imagens internas de projetos */
+  .project-images img {
+    max-width: 90%;
+    height: auto;
+    margin: 0 auto 1rem auto;
+    display: block;
   }
 
   /* Botões nos projetos */
@@ -244,8 +251,36 @@
     padding: 0.6rem 1rem;
   }
 
-  /* Corrige footer duplicado */
+  /* Footer com espaçamento */
   #footer {
     margin-top: 2rem;
+  }
+}
+
+/* -------- Ajustes para telas menores (responsividade) -------- */
+@media screen and (max-width: 980px) {
+
+  /* Esconde footer duplicado */
+  #footer {
+    display: none;
+  }
+
+  /* Header mais legível */
+  #header h1 {
+    font-size: 2.3rem;
+    line-height: 1.3;
+  }
+
+  #header p {
+    font-size: 1.8rem;
+    line-height: 1.6;
+  }
+
+  /* Imagens dentro dos projetos */
+  .project-images img {
+    max-width: 50%;
+    height: auto;
+    margin: 0 auto 1rem auto; /* centraliza */
+    display: block;
   }
 }
