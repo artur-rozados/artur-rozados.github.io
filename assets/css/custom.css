@@ -1,22 +1,21 @@
-
-/* -------- Layout -------- */
+/* -------- Layout base (desktop) -------- */
 #header {
-  width: 35%;          /* ocupa 35% da largura da tela */
-  position: fixed;     /* fica fixo na lateral */
+  width: 35%;
+  position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   overflow: hidden;
-  z-index: 1;          /* garante que fique acima do fundo */
+  z-index: 1;
 }
 
 #main {
-  margin-left: 35%;    /* começa depois do header */
+  margin-left: 35%;
   width: 65%;
-  padding: 2rem;       /* espaço interno */
+  padding: 2rem;
 }
 
-/* -------- Overlay no header -------- */
+/* Overlay no header */
 #header::before {
   content: "";
   position: absolute;
@@ -24,34 +23,31 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.4); /* camada preta 40% */
-  z-index: -1; /* atrás do texto */
+  background: rgba(0, 0, 0, 0.4);
+  z-index: -1;
 }
 
-/* -------- Texto no header -------- */
+/* Texto do header */
 #header h1,
 #header p {
-  color: #fff; /* sempre branco */
+  color: #fff;
   text-shadow: 0 2px 6px rgba(0,0,0,0.7);
   line-height: 1.5;
 }
 
 #header h1 {
-  font-size: 2.0em; /* título maior */
+  font-size: 2rem;
   margin-bottom: 1rem;
 }
 
 #header p {
   font-size: 1.4em;
+  max-width: 28ch;
+  margin: 0 auto;
+  text-align: left;
 }
 
-
-#header p {
-  max-width: 28ch;   /* aumenta limite (antes era mais estreito) */
-  margin: 0 auto;    /* centraliza dentro do header */
-  text-align: left;  /* deixa alinhado à esquerda */
-}
-/* -------- Botões -------- */
+/* Botões padrão */
 .button {
   border-radius: 6px;
   padding: 0.6em 1.2em;
@@ -76,133 +72,63 @@
   color: #000 !important;
 }
 
-/* -------- Responsividade -------- */
-@media screen and (max-width: 980px) {
-  #header {
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
-
-  #main {
-    margin-left: 0;
-    width: 100%;
-  }
-}
-
-
-/* Links para projetos no index */
+/* Links de projetos no index */
 .proj-link img {
   display: block;
   width: 100%;
-  border-radius: 6px; /* mesmo estilo do tema */
+  border-radius: 6px;
 }
-
-
-/* Link de voltar */
-.back-link {
-  display: inline-block;
-  margin: 1em 0;
-  color: #666;
-  text-decoration: none;
-  font-size: 0.95em;
-}
-
-.back-link:hover {
-  color: #2ebaae; /* cor de destaque */
-  text-decoration: underline;
-}
-
 
 /* Botões maiores e legíveis */
 .back-link,
 .github-link,
 .button {
-  font-size: 1rem;       /* aumenta o tamanho do texto */
-  padding: 0.75em 1.5em; /* mais espaço interno */
-  border-radius: 8px;    /* cantos mais arredondados */
-  font-weight: 600;      /* texto mais forte */
-  display: inline-block; /* garante alinhamento */
+  font-size: 1rem;
+  padding: 0.75em 1.5em;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-block;
   text-align: center;
 }
 
-/* Versão escura para botões principais (ex: GitHub) */
+/* Botão GitHub */
 .github-link {
-  background: #24292f; /* cor do GitHub */
+  background: #24292f;
   color: #fff !important;
   border: none;
 }
-
 .github-link:hover {
   background: #444c56;
 }
 
-/* Botão "Voltar" claro */
+/* Botão Voltar */
 .back-link {
   background: #f0f0f0;
   color: #333 !important;
   border: none;
 }
-
 .back-link:hover {
   background: #ddd;
 }
 
-
-/* Corrige layout da esquerda */
-#project-header {
-  background: url("../../images/bg.jpg") no-repeat center center;
-  background-size: cover;
-  color: white;
-  text-align: left;
-  padding: 3rem 2rem;
-}
-
-#project-header h1 {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-#project-header p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-.project-buttons {
-  margin-top: 2rem;
-}
-
-.project-buttons a {
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
-  margin-right: 0.5rem;
-  border-radius: 6px;
-}
-
-/* Ajustes específicos para páginas de projeto */
+/* Imagens internas dos projetos */
 .project-images img {
-  max-width: 50%;   /* controla o tamanho */
-  height: auto;     /* mantém a proporção */
-  margin-bottom: 1rem;
+  max-width: 50%;
+  height: auto;
+  margin: 0 auto 1rem auto;
   display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-
-/* Normalizar altura das thumbs na página inicial */
+/* Thumbs no index */
 .work-item img {
-  height: 350px;       /* altura fixa */
-  width: 100%;         /* ocupa toda a largura do container */
-  object-fit: cover;   /* mantém proporção, cortando excesso */
-  border-radius: 8px;  /* opcional: deixa cantos arredondados */
+  height: 350px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-
-/* -------- Responsividade -------- */
+/* -------- Responsividade até 980px -------- */
 @media screen and (max-width: 980px) {
-  /* Header ocupa toda a largura */
   #header {
     position: relative;
     width: 100%;
@@ -211,76 +137,100 @@
     text-align: center;
   }
 
-  /* Conteúdo principal vem logo abaixo */
   #main {
     margin-left: 0;
     width: 100%;
     padding: 1rem;
   }
 
-  /* Texto do header */
   #header h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   #header p {
-    font-size: 1rem;
-    max-width: none; /* deixa expandir */
+    font-size: 1.1rem;
+    max-width: none;
   }
 
-  /* Thumbs dos projetos no index */
+  /* Thumbs menores */
   .work-item img {
     height: auto;
     max-height: 200px;
-    object-fit: cover;
   }
 
-  /* Imagens internas de projetos */
+  /* Imagens de projeto maiores no mobile */
   .project-images img {
-    max-width: 90%;
-    height: auto;
-    margin: 0 auto 1rem auto;
-    display: block;
+    max-width: 50%;
   }
 
-  /* Botões nos projetos */
+  /* Botões mais compactos no mobile */
   .project-buttons a {
     display: block;
     margin: 0.5rem auto;
     font-size: 0.9rem;
     padding: 0.6rem 1rem;
   }
-
-  /* Footer com espaçamento */
-  #footer {
-    margin-top: 2rem;
-  }
 }
 
-/* -------- Ajustes para telas menores (responsividade) -------- */
-@media screen and (max-width: 980px) {
-
-  /* Esconde footer duplicado */
-  #footer {
-    display: none;
-  }
-
-  /* Header mais legível */
-  #header h1 {
-    font-size: 2.3rem;
+/* -------- Responsividade até 768px (mobile menor) -------- */
+@media screen and (max-width: 768px) {
+  /* Header só nas páginas de projeto */
+  .project-page #header h1 {
+    font-size: 2.2rem;
     line-height: 1.3;
   }
 
-  #header p {
-    font-size: 1.8rem;
+  .project-page #header p {
+    font-size: 1.2rem;
     line-height: 1.6;
   }
 
-  /* Imagens dentro dos projetos */
-  .project-images img {
-    max-width: 50%;
-    height: auto;
-    margin: 0 auto 1rem auto; /* centraliza */
-    display: block;
+  /* Ajustar fonte do conteúdo das páginas de projeto */
+  .project-page #main h2,
+  .project-page #main h3 {
+    font-size: 1.4rem;
   }
+
+  .project-page #main p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .project-page .project-buttons a {
+    font-size: 1rem;
+  }
+
+  /* Esconder footer duplicado só nos projetos */
+  .project-page .footer-project {
+    display: none;
+  }
+}
+
+/* Corrigir footer duplicado no mobile */
+@media screen and (max-width: 980px) {
+  #footer + #footer {
+    display: none; /* se houver 2 footers seguidos, esconde o segundo */
+  }
+}
+
+/* -------- Fontes maiores só nos projetos -------- */
+.project-page #header h1 {
+  font-size: 2.6rem !important;
+  line-height: 1.3 !important;
+}
+
+.project-page #header p {
+  font-size: 2rem !important;
+  line-height: 1.6 !important;
+}
+
+/* -------- Fontes do conteúdo interno (só nos projetos) -------- */
+.project-page #main h2 {
+  font-size: 2.4rem !important;
+  margin-bottom: 1rem;
+}
+
+.project-page #main p {
+  font-size: 1.7rem !important;
+  line-height: 1.7 !important;
 }
