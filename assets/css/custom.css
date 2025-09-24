@@ -211,13 +211,16 @@
     font-size: 2.5rem !important;
     line-height: 1.7 !important;
   }
-}
 
-  /* Botões ainda maiores no mobile */
+    /* Botões ainda maiores no mobile */
   .project-buttons a,
   .lang-switch a {
     font-size: 1.5rem; 
   }
+
+}
+
+
 
 /* ==============================
    RESPONSIVIDADE ATÉ 768px (MOBILE)
