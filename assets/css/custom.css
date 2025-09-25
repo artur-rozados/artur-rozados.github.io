@@ -9,6 +9,8 @@
   bottom: 0;
   overflow: hidden;
   z-index: 1;
+  text-align: center; /* Centraliza o conteúdo */
+  padding: 3rem 1rem; /* Adiciona mais espaçamento no topo */
 }
 
 #main {
@@ -48,7 +50,8 @@
   font-size: 1.4em;
   max-width: 28ch;
   margin: 0 auto;
-  text-align: left;
+  text-align: center; /* Centraliza o texto */
+  margin-bottom: 1rem;
 }
 
 /* ==============================
@@ -155,18 +158,24 @@
     padding: 1.5rem 1rem;
     text-align: center;
   }
-  #main {
-    margin-left: 0;
-    width: 100%;
-    padding: 1rem;
-  }
 
   #header h1 {
     font-size: 1.8rem;
   }
+
   #header p {
     font-size: 1.1rem;
     max-width: none;
+  }
+
+  .lang-switch {
+    font-size: 1.2em;
+  }
+
+  #main {
+    margin-left: 0;
+    width: 100%;
+    padding: 1rem;
   }
 
   /* Thumbs menores */
@@ -212,7 +221,7 @@
     line-height: 1.7 !important;
   }
 
-    /* Botões ainda maiores no mobile */
+  /* Botões ainda maiores no mobile */
   .project-buttons a,
   .lang-switch a {
     font-size: 1.5rem; 
@@ -220,12 +229,26 @@
 
 }
 
-
-
 /* ==============================
    RESPONSIVIDADE ATÉ 768px (MOBILE)
    ============================== */
 @media screen and (max-width: 768px) {
+  #header {
+    padding: 2rem 1rem;
+  }
+
+  #header h1 {
+    font-size: 1.6rem;
+  }
+
+  #header p {
+    font-size: 1.2rem;
+  }
+
+  .lang-switch {
+    font-size: 1.2em;
+  }
+
   .project-page #header h1 {
     font-size: 5rem;
     line-height: 1.3;
@@ -249,14 +272,12 @@
   }
 }
 
-
 /* ==============================
    SWITCH DE LINGUAGEM
    ============================== */
-
 .lang-switch {
   margin-top: 1rem;
-  text-align: center;
+  font-size: 1.1em;
 }
 
 .lang-switch a {
