@@ -25,9 +25,9 @@
       <!-- Painel esquerdo -->
       <header id="header">
         <div class="inner">
-          <h1><strong>Projeto: Roteador OpenWRT</strong></h1>
-          <p>Raspberry Pi 4 rodando OpenWRT com WireGuard/OpenVPN e Tailscale.<br>
-          Objetivo: acesso remoto seguro mesmo atrás de CGNAT.</p>
+          <h1><strong>Plataforma de Testes Automatizada para Aprendizagem Federada em Computação de Borda</strong></h1>
+          <p>Um cluster heterogêneo de 18 nós orquestrado com Ansible para acelerar a pesquisa em IA de borda (Edge AI).<br>
+          </p>
         <!--Não feche </div> aqui, fica feio por algum motivo-->
 
           <!-- Switch de idioma -->
@@ -47,11 +47,26 @@
       <!-- Conteúdo principal -->
       <div id="main">
         <section>
-          <h2>Descrição</h2>
+          <h4>O Objetivo</h4>
           <p>
-            Desenvolvimento de um roteador baseado em Raspberry Pi 4 utilizando OpenWRT,
-            com suporte a CGNAT bypass via Tailscale e integração de VPNs (WireGuard e OpenVPN).
+            O objetivo principal deste projeto foi criar uma plataforma realista e gerenciável para conduzir experimentos de Aprendizagem Federada. A pesquisa nesta área exige o teste de algoritmos em uma variedade de dispositivos com restrições de hardware que simulam ambientes de 'borda' (edge) do mundo real — uma tarefa notoriamente difícil de escalar e reproduzir com configurações manuais.
           </p>
+
+          <h4>Minha Solução</h4>
+          <p>
+            Projetei e construí um cluster heterogêneo de 18 minicomputadores (incluindo Raspberry Pis e NVIDIA Jetsons) operando em uma sub-rede isolada. Para gerenciar este ambiente complexo, desenvolvi um conjunto abrangente de playbooks Ansible que automatiza todo o ciclo de vida da plataforma — desde o provisionamento inicial do sistema operacional e instalação de software até a configuração de rede e o deploy dos experimentos.
+          </p>
+          <p>
+            Essa abordagem de "Infraestrutura como Código" (IaC) transforma um processo manual complexo e propenso a erros em uma solução confiável e automatizada.
+          </p>
+
+          <h4>Destaques e Impacto</h4>
+          <ul>
+            <li><strong>Automatizado:</strong> Elimina configurações manuais repetitivas, permitindo que os pesquisadores foquem nos experimentos em vez da infraestrutura.</li>
+            <li><strong>Escalável e Reproduzível:</strong> O Ansible garante que cada experimento seja perfeitamente reproduzível e que todo o ambiente possa ser facilmente escalado ou reconstruído.</li>
+            <li><strong>Ambiente Heterogêneo:</strong> Simula condições do mundo real ao permitir testes de desempenho de algoritmos em hardware diverso com diferentes restrições (CPU, consumo de energia, dissipação térmica).</li>
+            <li><strong>Pesquisa Acelerada:</strong> Reduz drasticamente o tempo necessário para configurar e executar novos experimentos, acelerando o ciclo geral de pesquisa e desenvolvimento.</li>
+          </ul>
           <h2>Imagens</h2>
           <div class="project-images">
             <img src="images/esquematica.png" alt="OpenWRT Router 1" class="image fit">

@@ -25,9 +25,9 @@
       <!-- Painel esquerdo -->
       <header id="header">
         <div class="inner">
-          <h1><strong>Project: OpenWRT Router</strong></h1>
-          <p>Raspberry Pi 4 running OpenWRT with WireGuard/OpenVPN and Tailscale.<br>
-          Goal: secure remote access even behind CGNAT.</p>
+          <h1><strong>Automated Edge Computing Testbed for Federated Learning</strong></h1>
+          <p>An 18-node heterogeneous cluster orchestrated with Ansible to accelerate research in edge AI.<br>
+          </p>
         <!--Não feche </div> aqui, fica feio por algum motivo-->
 
           <!-- Switch de idioma -->
@@ -47,12 +47,28 @@
       <!-- Conteúdo principal -->
       <div id="main">
         <section>
-          <h2>Descrição</h2>
+          <h2>Description</h2>
+          <h4>The Goal</h4>
           <p>
-            Development of a router based on a Raspberry Pi 4 running OpenWRT,
-            with support for CGNAT bypass via Tailscale and integration of VPNs (WireGuard and OpenVPN).
+            The primary goal of this project was to create a realistic and manageable platform for conducting Federated Learning experiments. Research in this area requires testing algorithms on a variety of hardware-constrained devices that mimic real-world 'edge' environments—a task that is notoriously difficult to scale and reproduce with manual configurations.
           </p>
-          <h2>Imagens</h2>
+
+          <h4>My Solution</h4>
+          <p>
+            I designed and built a heterogeneous cluster of 18 mini-computers (including Raspberry Pis and NVIDIA Jetsons) operating on an isolated subnet. To manage this complex environment, I developed a comprehensive set of Ansible playbooks that automates the entire lifecycle of the testbed—from initial OS provisioning and software installation to network configuration and experiment deployment.
+          </p>
+          <p>
+            This "Infrastructure as Code" approach transforms a complex, error-prone manual process into a reliable, push-button solution.
+          </p>
+
+          <h4>Key Features & Impact</h4>
+          <ul>
+            <li><strong>Automated:</strong> Eliminates repetitive manual setup, allowing researchers to focus on experiments instead of infrastructure.</li>
+            <li><strong>Scalable & Reproducible:</strong> Ansible ensures that every experiment is perfectly reproducible and the entire environment can be easily scaled or rebuilt.</li>
+            <li><strong>Heterogeneous Environment:</strong> Simulates real-world conditions by allowing algorithm performance testing across diverse hardware with varying constraints (CPU, power consumption, thermals).</li>
+            <li><strong>Accelerated Research:</strong> Drastically reduces the time required to set up and run new experiments, speeding up the overall research and development cycle.</li>
+          </ul>
+          <h2>Images</h2>
           <div class="project-images">
             <img src="images/esquematica.png" alt="OpenWRT Router 1" class="image fit">
             <img src="images/openwrt-router-02.jpg" alt="OpenWRT Router 2" class="image fit">
@@ -62,119 +78,3 @@
     </div>
   </body>
 </html>
-
-
-
-
-
-
-
-<!--
-
-<!DOCTYPE HTML>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Project: OpenWRT Router</title>
-    <link rel="stylesheet" href="../../assets/css/main.css">
-    <link rel="stylesheet" href="../../assets/css/custom.css">
-    <style>
-      .project-buttons {
-        margin-top: 2rem;
-      }
-      .project-buttons a {
-        display: inline-block;
-        padding: 0.4rem 0.8rem;
-        font-size: 0.85rem;
-        margin-right: 0.5rem;
-        border-radius: 6px;
-      }
-    </style>
-  </head>
-  <body class="is-preload project-page">
-    <div id="wrapper">
-
-      <header id="header">
-        <div class="inner">
-          <h1><strong>Project: OpenWRT Router</strong></h1>
-          <p>Raspberry Pi 4 running OpenWRT with WireGuard/OpenVPN and Tailscale.<br>
-          Goal: secure remote access even behind CGNAT.</p>
-
-          <div class="project-buttons">
-            <a href="https://github.com/artur-rozados" target="_blank" class="github-link">View on GitHub</a>
-            <a href="../../index-en.html" class="back-link">← Back to Portfolio</a>
-          </div>
-        </div>
-      </header>
-
-      <div id="main">
-        <section>
-          <h2>Description</h2>
-          <p>
-            Development of a router based on a Raspberry Pi 4 running OpenWRT,
-            with support for CGNAT bypass via Tailscale and integration of VPNs (WireGuard and OpenVPN).
-          </p>
-          <h2>Images</h2>
-          <div class="project-images">
-            <img src="images/openwrt-router-01.jpg" alt="OpenWRT Router 1" class="image fit">
-            <img src="images/openwrt-router-02.jpg" alt="OpenWRT Router 2" class="image fit">
-          </div>
-        </section>
-      </div>
-    </div>
-  </body>
-</html>
-<!DOCTYPE HTML>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Project: OpenWRT Router</title>
-    <link rel="stylesheet" href="../../assets/css/main.css">
-    <link rel="stylesheet" href="../../assets/css/custom.css">
-    <style>
-      .project-buttons {
-        margin-top: 2rem;
-      }
-      .project-buttons a {
-        display: inline-block;
-        padding: 0.4rem 0.8rem;
-        font-size: 0.85rem;
-        margin-right: 0.5rem;
-        border-radius: 6px;
-      }
-    </style>
-  </head>
-  <body class="is-preload project-page">
-    <div id="wrapper">
-
-      <header id="header">
-        <div class="inner">
-          <h1><strong>Project: OpenWRT Router</strong></h1>
-          <p>Raspberry Pi 4 running OpenWRT with WireGuard/OpenVPN and Tailscale.<br>
-          Goal: secure remote access even behind CGNAT.</p>
-
-          <div class="project-buttons">
-            <a href="https://github.com/artur-rozados" target="_blank" class="github-link">View on GitHub</a>
-            <a href="../../index-en.html" class="back-link">← Back to Portfolio</a>
-          </div>
-        </div>
-      </header>
-
-      <div id="main">
-        <section>
-          <h2>Description</h2>
-          <p>
-            Development of a router based on a Raspberry Pi 4 running OpenWRT,
-            with support for CGNAT bypass via Tailscale and integration of VPNs (WireGuard and OpenVPN).
-          </p>
-          <h2>Images</h2>
-          <div class="project-images">
-            <img src="images/openwrt-router-01.jpg" alt="OpenWRT Router 1" class="image fit">
-            <img src="images/openwrt-router-02.jpg" alt="OpenWRT Router 2" class="image fit">
-          </div>
-        </section>
-      </div>
-    </div>
-  </body>
-</html>
--->
